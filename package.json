@@ -4,9 +4,11 @@
     "dev": "vite-node src/main.js"
   },
   "dependencies": {
+    "axios": "^1.4.0",
     "discord.js": "^14.11.0",
     "dotenv": "^16.3.1",
     "fast-glob": "^3.3.0",
+    "http.js": "^1.0.0",
     "pinia": "^2.1.4",
     "request": "^2.88.2",
     "vite-node": "^0.32.2",

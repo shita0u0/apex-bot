@@ -1,6 +1,6 @@
 import { Events } from "discord.js"
 import { useAppStore } from "@/store/app"
-import { async } from "fast-glob"
+
 export const event = {
     name: Events.InteractionCreate,
     once: false
