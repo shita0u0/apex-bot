@@ -27,8 +27,6 @@ export const loadCommands = async () => {
     }
     await updataSlashCommands(commands)
     appStore.commandsActionMap = actions
-
-    console.log(appStore.commandsActionMap)
 }
 
 export const loadEvents = async () => {

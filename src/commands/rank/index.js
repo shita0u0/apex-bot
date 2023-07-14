@@ -7,7 +7,7 @@ axios.defaults.httpAgent = agent
 
 export const command = new SlashCommandBuilder()
     .setName('rank')
-    .setDescription('查詢目前牌位狀況')
+    .setDescription('查詢牌位狀況')
 
 export const action = async (interaction) => {
     let testreps = await axios.get("https://api.mozambiquehe.re/predator?auth=" + process.env.apex_token).then(response => response.data)
@@ -17,7 +17,7 @@ export const action = async (interaction) => {
         .addFields(
             { name: '主機', value: 'PC', inline: true },
             { name: '頂尖獵殺者數量 / 底分', value: testreps["RP"]["PC"]["foundRank"] + ' / ' + testreps["RP"]["PC"]["val"], inline: true },
-            { name: '總大師數量', value: '' + testreps["RP"]["PC"]["totalMastersAndPreds"], inline: true },
+            { name: ':turtle: 總大師數量', value: '' + testreps["RP"]["PC"]["totalMastersAndPreds"], inline: true },
             { name: '\n', value: '\n' }
         )
         .addFields(
